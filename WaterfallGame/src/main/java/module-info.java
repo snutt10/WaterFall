@@ -9,4 +9,6 @@ module csc180.waterfallgame {
 
     opens csc180.waterfallgame to javafx.fxml;
     exports csc180.waterfallgame;
+    exports csc180.waterfallgame.Controllers;
+    opens csc180.waterfallgame.Controllers to javafx.fxml;
 }
