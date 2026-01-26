@@ -68,17 +68,36 @@ public class Car {
 
     protected void distanceTravelled(int moveAmount) {
         //TODO: implement logic
+        if (traveledDistance < 0) {
+            traveledDistance = 0;
+        }
+        setTraveledDistance(getTraveledDistance() + moveAmount);
     }
 
-    protected void track(SpeedState state){
+    protected void track(SpeedState speedState){
         //TODO: implement logic
+      for(SpeedState s : trackSpeed){
+          if(s == speedState){
+              System.out.println("Car speed is: " + speedState);
+          }
+      }
     }
 
     protected void checkCarState(){
         //TODO: implement logic
-    }
+         for(CarState c : CarState.values()){
+             if (c == carState){
+                 System.out.println("Car state is: " + carState);
+             } else {
+                 System.out.println("Car state is: " + c);
+             }
+         }
+        }
+
 
     public void carMovement(int distance){
         //TODO: implement logic
+
     }
+
 }
