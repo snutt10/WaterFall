@@ -7,6 +7,7 @@ public class Race {
     private int MIN_DISTANCE = 5;
     private List<Car> cars;
     private int distance;
+Car c = new Car();
 
     public Race(List<Car> cars, int distance) {}
 
@@ -37,15 +38,26 @@ public class Race {
         //TODO: implement logic
         cars = new ArrayList<>();
         setDistance(distance);
+        c.carMovement(distance);
     }
 
     public void resetCarState(List<Car> cars) {
         //TODO: implement logic
+        CarState carState = CarState.NORMAL;
+        for (Car car : cars) {
+            carState = car.getCarState();
+        }
 
     }
 
     public boolean isOver() {
         //TODO: implement logic
+     for (Car car : cars) {
+         if(c.getTraveledDistance() >= distance){
+             //put winner
+         }
+
+     }
         return false;
     }
 }
