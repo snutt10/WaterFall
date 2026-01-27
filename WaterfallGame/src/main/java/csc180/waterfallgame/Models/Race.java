@@ -39,12 +39,18 @@ public class Race {
         setDistance(distance);
     }
 
-    public void resetCarState(List<Car> cars) {
+    public void resetCarState() {
         //TODO: implement logic
+        cars = new ArrayList<>();
+        setDistance(MIN_DISTANCE);
 
     }
 
     public boolean isOver() {
+        if(getDistance() == 20){
+            resetCarState();
+            return true;
+        }
         //TODO: implement logic
         return false;
     }
