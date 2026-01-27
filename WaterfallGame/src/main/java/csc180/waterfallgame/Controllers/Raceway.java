@@ -1,9 +1,13 @@
 package csc180.waterfallgame.Controllers;
 
+import csc180.waterfallgame.Models.Car;
 import csc180.waterfallgame.Models.Race;
+import csc180.waterfallgame.Views.UI;
 
 public class Raceway {
     private Race race;
+    private UI view;
+    private Car cars;
     private float Race_Duration;
     private String leaderBoard;
 
@@ -14,10 +18,9 @@ public class Raceway {
     }
 
     public void race(){
-        //TODO: Implement logic
-    }
-
-    private void moveCars(){
-        //TODO: implement logic
+        view.showRacers(race.getCars(), race.getDistance(), Race_Duration);
+        Race_Duration++;
+        cars.carMovement(cars.getTraveledDistance());
+        race.isOver();
     }
 }

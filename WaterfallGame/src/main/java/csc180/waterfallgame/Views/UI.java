@@ -5,7 +5,7 @@ import csc180.waterfallgame.Models.Car;
 import java.util.List;
 
 public class UI {
-    public void showRacers(List<Car> cars, int distance, int raceDuration) {
+    public void showRacers(List<Car> cars, int distance, float raceDuration) {
         //TODO: implement logic
     }
 
