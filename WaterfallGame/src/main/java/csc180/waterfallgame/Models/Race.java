@@ -1,5 +1,6 @@
 package csc180.waterfallgame.Models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Race {
@@ -34,10 +35,13 @@ public class Race {
 
     public void Race(int distance) {
         //TODO: implement logic
+        cars = new ArrayList<>();
+        setDistance(distance);
     }
 
     public void resetCarState(List<Car> cars) {
         //TODO: implement logic
+
     }
 
     public boolean isOver() {
