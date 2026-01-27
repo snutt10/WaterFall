@@ -6,6 +6,7 @@ module csc180.waterfallgame {
     requires com.dlsc.formsfx;
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
+    requires java.desktop;
 
     opens csc180.waterfallgame to javafx.fxml;
     exports csc180.waterfallgame;
