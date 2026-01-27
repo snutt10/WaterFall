@@ -10,6 +10,9 @@ public class Car {
     private CarState carState;
     private ArrayList<SpeedState> trackSpeed;
 
+    public Car(){
+
+    }
     public Car(String name, int speed, int traveledDistance, CarState carState) {
         this.name = name;
         this.speed = speed;
