@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -107,7 +108,7 @@
          <Pane prefHeight="200.0" prefWidth="200.0" />
       </children>
    </HBox>
-   <GridPane minWidth="1.0" prefHeight="156.0" prefWidth="783.0">
+   <GridPane minWidth="1.0" prefHeight="156.0" prefWidth="783.0" border="10">
        <columnConstraints>
          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
          <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" prefWidth="2.0" />
@@ -157,13 +158,39 @@
       <children>
          <Pane prefHeight="200.0" prefWidth="200.0">
             <children>
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" layoutX="64.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="38.0" />
-               <Sphere radius="50" />
-               <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" layoutX="55.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+               <Circle fill="DODGERBLUE" layoutX="70.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+               <Circle fill="DODGERBLUE" layoutX="89.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+            </children>
+         </Pane>
+         <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <children>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4e1fff" height="17.0" layoutX="55.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+               <Circle fill="#4e1fff" layoutX="70.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+               <Circle fill="#4e1fff" layoutX="89.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+            </children>
+         </Pane>
+         <Pane layoutX="10.0" layoutY="42.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+            <children>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6a21" height="17.0" layoutX="55.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+               <Circle fill="#ff6a21" layoutX="70.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+               <Circle fill="#ff6a21" layoutX="89.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+            </children>
+         </Pane>
+         <Pane layoutX="10.0" layoutY="42.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+            <children>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#21ff82" height="17.0" layoutX="55.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+               <Circle fill="#21ff82" layoutX="70.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+               <Circle fill="#21ff82" layoutX="89.0" layoutY="23.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
             </children>
          </Pane>
       </children>
+      <effect>
+         <Bloom>
+            <input>
+               <InnerShadow />
+            </input>
+         </Bloom>
+      </effect>
    </GridPane>
-   <Sphere radius="50" />
-   <Sphere radius="50" />
 </VBox>
