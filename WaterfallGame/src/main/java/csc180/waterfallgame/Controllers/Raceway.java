@@ -17,10 +17,14 @@ public class Raceway {
         this.leaderBoard = leaderBoard;
     }
 
+<<<<<<< HEAD
     public void race(int distance){
+=======
+    public void race(){
+>>>>>>> parent of 4fe3966 (additions to enums and adding logic to methods)
         view.showRacers(race.getCars(), race.getDistance(), Race_Duration);
         Race_Duration++;
         cars.carMovement(cars.getTraveledDistance());
-        race.isOver(distance);
+        race.isOver();
     }
 }
