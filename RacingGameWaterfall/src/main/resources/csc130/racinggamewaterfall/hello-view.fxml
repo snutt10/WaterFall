@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="csc130.racinggamewaterfall.Controllers.HelloController">
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="🏁 JavaFX Race Car Game"/>
+            <Button text="Start Race" onAction="#startRace"/>
+            <Label fx:id="statusLabel"/>
+        </VBox>
+    </top>
+
+    <center>
+        <Pane fx:id="trackPane" prefHeight="300" prefWidth="600"
+              style="-fx-background-color: lightgray;"/>
+    </center>
+</BorderPane>
