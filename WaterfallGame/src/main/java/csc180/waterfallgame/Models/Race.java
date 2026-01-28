@@ -46,8 +46,8 @@ public class Race {
 
     }
 
-    public boolean isOver(int distance) {
-        if(getDistance() == distance){
+    public boolean isOver() {
+        if(getDistance() == 20){
             resetCarState();
             return true;
         }

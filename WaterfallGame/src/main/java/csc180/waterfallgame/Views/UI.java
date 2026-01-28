@@ -1,14 +1,13 @@
 package csc180.waterfallgame.Views;
 
 import csc180.waterfallgame.Models.Car;
-import csc180.waterfallgame.Models.Race;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UI {
-    List<Car> cars = new ArrayList<>();
-    Race race = new Race(cars, 15);
+    public void showRacers(List<Car> cars, int distance, float raceDuration) {
+        //TODO: implement logic
+    }
 
     private void cars (List<Car> cars) {
         //Todo: implement logic
@@ -19,8 +18,6 @@ public class UI {
     }
 
     private void displayLeaderBoard(){
-        if(race.isOver(15)){
-            //TODO: Add a point to the winners score on the leaderboard
-        }
+        //TODO: implement logic
     }
 }
