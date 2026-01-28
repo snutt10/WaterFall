@@ -100,8 +100,8 @@ public class Car {
 
     public void carMovement(int distance){
         //TODO: implement logic
-        for (int i = 0; i < ; i++) {
-            
+        for (int i = 0; i < distance; i++) {
+            setTraveledDistance(getTraveledDistance()+1);
         }
     }
 
