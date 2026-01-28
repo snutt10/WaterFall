@@ -100,11 +100,18 @@
                <Insets left="20.0" right="20.0" />
             </padding>
          </GridPane>
+         <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+           <items>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+           </items>
+         </SplitPane>
          <Label id="title" alignment="CENTER" prefHeight="130.0" prefWidth="364.0" text="Car Racers" textAlignment="CENTER" wrapText="true">
             <font>
                <Font size="44.0" />
             </font>
          </Label>
+         <Button mnemonicParsing="false" text="Button" />
       </children>
    </HBox>
    <GridPane minWidth="1.0" prefHeight="208.0" prefWidth="848.0" style="-fx-border-style: solid;" stylesheets="@style.css">
@@ -165,7 +172,7 @@
          </Pane>
          <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
             <children>
-               <ImageView fitHeight="208.0" fitWidth="523.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="208.0" fitWidth="849.0" pickOnBounds="true" preserveRatio="true">
                   <viewport>
                      <Rectangle2D />
                   </viewport>
