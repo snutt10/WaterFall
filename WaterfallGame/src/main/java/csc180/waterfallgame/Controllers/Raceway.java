@@ -19,7 +19,11 @@ public class Raceway {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void race(int distance){
+=======
+    public void race(){
+>>>>>>> parent of 4fe3966 (additions to enums and adding logic to methods)
 =======
     public void race(){
 >>>>>>> parent of 4fe3966 (additions to enums and adding logic to methods)
