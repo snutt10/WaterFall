@@ -17,10 +17,10 @@ public class Raceway {
         this.leaderBoard = leaderBoard;
     }
 
-    public void race(){
+    public void race(int distance){
         view.showRacers(race.getCars(), race.getDistance(), Race_Duration);
         Race_Duration++;
         cars.carMovement(cars.getTraveledDistance());
-        race.isOver();
+        race.isOver(distance);
     }
 }
