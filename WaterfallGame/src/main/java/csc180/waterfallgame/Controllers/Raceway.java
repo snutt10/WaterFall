@@ -5,7 +5,7 @@ import csc180.waterfallgame.Models.Race;
 import csc180.waterfallgame.Views.UI;
 
 public class Raceway {
-    private final Race race;
+    private Race race;
     private UI view;
     private Car cars;
     private float Race_Duration;
@@ -17,9 +17,10 @@ public class Raceway {
         this.leaderBoard = leaderBoard;
     }
 
-    public void race(int distance){
+    public void race(){
+        view.showRacers(race.getCars(), race.getDistance(), Race_Duration);
         Race_Duration++;
         cars.carMovement(cars.getTraveledDistance());
-        race.isOver(distance);
+        race.isOver();
     }
 }
