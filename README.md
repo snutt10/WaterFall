@@ -13,4 +13,6 @@ SpeedState:
 # Installation
 The game is a web based app no installation required
 
-# Rules
+# Setup
+
+# Usage instructions
