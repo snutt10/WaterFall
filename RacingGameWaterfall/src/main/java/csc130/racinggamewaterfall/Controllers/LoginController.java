@@ -30,8 +30,8 @@ public class LoginController {
 
     private void loadGameScreen(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/csc180/waterfallgame/hello-view.fxml"));
-            Scene gameScene = new Scene(loader.load(), 700, 400);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/csc130/racinggamewaterfall/hello-view.fxml"));
+            Scene gameScene = new Scene(loader.load(), 700, 700);
 
             Stage stage = (Stage) usernameField.getScene().getWindow();
             stage.setScene(gameScene);

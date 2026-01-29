@@ -7,6 +7,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -17,12 +18,23 @@ import java.util.List;
 
 public class HelloController {
 
-    @FXML private Pane trackPane;
-    @FXML private Label statusLabel;
+    @FXML
+    private Pane trackPane;
+    @FXML
+    private Label statusLabel;
+    @FXML
+    private Label carOneScore;
+    @FXML
+    private Label carTwoScore;
+    @FXML
+    private Label carThreeScore;
+    @FXML
+    private Label carFourScore;
 
     private Race race;
     private List<Rectangle> carGraphics = new ArrayList<>();
     private Timeline timeline;
+    private List<Integer> scores;
 
     private final double FINISH_LINE = 550;
 
@@ -34,7 +46,7 @@ public class HelloController {
     }
 
     private void setupRace() {
-        trackPane.getChildren().clear();
+
         carGraphics.clear();
 
         List<Car> cars = List.of(
@@ -44,14 +56,14 @@ public class HelloController {
                 new Car("Yellow Car", 5)
         );
 
-        race = new Race(cars, FINISH_LINE);
+        race = new Race(cars, scores, FINISH_LINE);
 
         Color[] colors = {Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW};
 
         for (int i = 0; i < cars.size(); i++) {
             Rectangle carRect = new Rectangle(40, 20, colors[i]);
             carRect.setX(0);
-            carRect.setY(50 + i * 50);
+            carRect.setY(40 + i * 70);
             carGraphics.add(carRect);
             trackPane.getChildren().add(carRect);
         }
@@ -69,7 +81,37 @@ public class HelloController {
 
         if (race.isOver()) {
             timeline.stop();
+            updateLeaderBoard();
             statusLabel.setText("🏆 Winner: " + race.getWinner().getName());
         }
+    }
+
+    private void updateLeaderBoard() {
+
+        switch (race.getWinner().getName()) {
+            case "Red Car":
+                scores.add(scores.get(1), 1);
+                carOneScore.setText("" + scores.get(1));
+                break;
+            case "Blue car":
+                scores.add(scores.get(2), 2);
+                carTwoScore.setText("" + scores.get(2));
+                break;
+            case "Green car":
+                scores.add(scores.get(3), 3);
+                carThreeScore.setText("" + scores.get(3));
+                break;
+            case "Yellow car":
+                scores.add(scores.get(4), 4);
+                carFourScore.setText("" + scores.get(4));
+                break;
+            default:
+                break;
+        }
+    }
+
+    private boolean runTheGameAgain() {
+        //TODO: Implement logic
+        return true;
     }
 }

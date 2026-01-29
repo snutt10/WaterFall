@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc130.racinggamewaterfall.Controllers.HelloController">
-    <right>
-        <VBox alignment="center" spacing="10" BorderPane.alignment="CENTER">
-            <children>
-                <Label text="Registration" />
-                <TextField promptText="Username" />
-                <PasswordField promptText="Password" />
-                <Button text="Register" />
-            </children>
-            <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-            </padding>
-        </VBox>
-    </right>
-</BorderPane>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="csc130.racinggamewaterfall.Controllers.LoginController"
+      alignment="CENTER" spacing="15">
+
+    <Label text="🏎 Race Game Login" style="-fx-font-size: 20px;"/>
+
+    <TextField fx:id="usernameField" promptText="Enter username"/>
+    <PasswordField fx:id="passwordField" promptText="Enter password"/>
+
+    <Button text="Login" onAction="#handleLogin"/>
+
+    <Label fx:id="messageLabel" style="-fx-text-fill: red;"/>
+
+</VBox>
 
